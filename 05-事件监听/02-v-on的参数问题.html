@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 事件调用的方法没有参数 -->
+        <button @click="btn1Click()">button 1</button>
+        <button @click="btn1Click">button 1</button>
+
+        <!-- 在函数事件定义时，写函数时省略了小括号，但是方法本身是需要一个参数的 -->
+        <button>button 2</button>
+        <button>button 3</button>
+        <button>button 4</button>
+
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello',
+            },
+            methods: {
+                btn1Click() {
+                    console.log("btn1Click")
+                },
+                btn2Click(abc) {
+                    console.log('----------', abc)
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
