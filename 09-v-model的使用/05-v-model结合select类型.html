@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="app">
+		<!-- 1. 选择一个 -->
+        <select name="abc" v-model='fruit'>
+            <option value="o1">o1</option>
+            <option value="o2">o2</option>
+            <option value="o3">o3</option>
+            <option value="o4">o4</option>
+            <option value="o5">o5</option>
+        </select>
+
+        <!-- 选择多个 -->
+        <select name="abc" id="" v-model='fruits' multiple>
+            <option value="o1">o1</option>
+            <option value="o2">o2</option>
+            <option value="o3">o3</option>
+            <option value="o4">o4</option>
+            <option value="o5">o5</option>
+        </select>
+	</div>
+
+	<script src="../js/vue.js"></script>
+	<script>
+		const app = new Vue({
+			el: '#app',
+			data: {
+				message: 'hello',
+                fruit: 'o3',
+                fruits: []
+			}
+		})
+	</script>
+
+</body>
+
+</html>

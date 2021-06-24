@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="app">
+        <!-- checkbox单选框 -->
+		<!-- <label for="license">
+            <input type="checkbox" id="License" v-model='isAgree'>Agree User License
+        </label>
+        <h2>you choosed: {{isAgree}}</h2>
+        <button disabled='!isAgree'>Next step</button> -->
+
+        <!-- checkbox多选框 -->
+        <label for="">
+            <input type="checkbox" value='v1' v-model='hobbies'>v1
+            <input type="checkbox" value='v2' v-model='hobbies'>v2
+            <input type="checkbox" value='v3' v-model='hobbies'>v3
+            <input type="checkbox" value='v4' v-model='hobbies'>v4
+            <input type="checkbox" value='v5' v-model='hobbies'>v5
+        </label>
+        <h2>ur hobby is {{hobbies}}</h2>
+	</div>
+
+	<script src="../js/vue.js"></script>
+	<script>
+		const app = new Vue({
+			el: '#app', 
+			data: {
+				message: 'hello',
+                isAgree: false,
+                hobbies: []
+			}
+		})
+	</script>              
+
+</body>
+
+</html>
